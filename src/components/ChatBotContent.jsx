@@ -6,7 +6,7 @@ const Content = ()=>{
        const firstrenderref = useRef(true)
        const [saidhi,setsaidhi]= useState(false)
        const [HaveYouAskedAReply,setHaveYouAskedAReply] = useState(-1)
-       const [file,setfile] = useState(null) //state lifted up and passed as prop`
+       const [file,setfile] = useState(null) //state lifted up and passed as prop
        const [reply,setReply] = useState('')
 
        const changeQuestionStatus = ()=>{
@@ -65,11 +65,11 @@ const Content = ()=>{
          //initial case
             ( <div className='w-[100vw] h-[80vh] flex flex-col items-center justify-center'>
               <div className=' flex flex-col  lg:gap-[200px]  gap-[350px] md:gap-[100px] sm:gap-[100px] rounded-lg bg-white lg:p-[0px] p-[20px]  lg:w-[60vw] lg:h-[50vh]  rounded-lg bg-white w-[80vw] h-[80vh]' >
-                    <img src={Robot} className='lg:ml-[350px] lg:w-[20%] drop-shadow-2xl rounded-lg'/>
-                        <div className='flex flex-row gap-[15px]'>
+
+                    <div className='flex flex-row gap-[15px]'>
                             <input ref={inpref} placeholder='Ask a Question' className='lg:w-[90%] p-[10px] bg-red-500 rounded-lg text-white font-mono font-bold focus:outline-none'/>
                             <button className='p-[10px] rounded-lg bg-black text-white hover:opacity-[0.6]' onClick={changeHiStatus}>Go</button >
-                        </div>
+                    </div>
               </div>
             </div>
              ):

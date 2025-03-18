@@ -23,6 +23,11 @@ const DoctorForm = (props)=>{
                 body:JSON.stringify(formdata)
             });
 
+            let data = await res.json();
+            if(data.successCode == 200){
+                window.alert('Registered!');
+            }
+
         }
         return(
         <form ref={formref} className='w-[50vw] h-[80vh] bg-white rounded-lg p-[30px] flex flex-col gap-[20px] justify-center '>

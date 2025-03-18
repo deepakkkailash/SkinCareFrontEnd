@@ -1,4 +1,4 @@
-import ChatBotContent from './ChatBotContent'
+import ChatBotContentRevised from './ChatBotContentRevised'
 import SelectionButton from './SelectionButton'
 import DoctorContent from './DoctorContent'
 import {useState} from 'react'
@@ -14,7 +14,7 @@ const Content = ()=>{
     }
     if(selected){
         if(selected=='Patient'){
-            return(<ChatBotContent />)
+            return(<ChatBotContentRevised />)
         }
         else if(selected=='doctor'){
             return (<DoctorContent />);

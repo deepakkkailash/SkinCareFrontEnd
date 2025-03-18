@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react'
 
 const BotReplySpace = (props)=>{
     if(props.imageNeeded){
-
+        console.log('hi');
         return (<>
 
         <div className='bg-black flex flex-col items-center rounded-lg p-[30px] w-[300px] h-[200px]'>
