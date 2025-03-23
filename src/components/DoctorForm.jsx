@@ -13,9 +13,9 @@ const DoctorForm = (props)=>{
 
             let formdata = new FormData(formref.current)
             formdata = Object.fromEntries(formdata.entries())
-            formdata = {...formdata,loc:[Loc.coords.latitude,Loc.coords.longitude]}
+            formdata = {...formdata,loc:[Loc.coords.longitude,Loc.coords.latitude]}
             console.log(formdata)
-            let res = await fetch('',{
+            let res = await fetch('https://2170-34-69-140-190.ngrok-free.app/registerDoctors',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
@@ -34,7 +34,9 @@ const DoctorForm = (props)=>{
             <h1 className='text-5xl font-mono font-bold text-yellow-700'>Welcome Doc....</h1>
             <FormComponent type='text' what='Name'  name='name'/>
             <FormComponent   type='text' what='NMR Registration Number' name='uniqueID'/>
+            <FormComponent   type='text' what='Full Address in one line' name='address'/>
             <FormComponent  type='number' what='Years Practioned' name='years'/>
+            <FormComponent  type='text' what='PhoneNumber' name='PhoneNumber'/>
             <FetchLoc Loc={Loc} change={changeLoc}/>
             <button  type='button' onClick={formupload} className='p-[30px] rounded-lg bg-green-500 text-white font-bold font-mono hover:opacity-[0.8]'>Register </button>
             <button type='button' className='bg-red-500 text-white font-bold font-mono w-[60px] h-[60px] rounded-lg p-[10px] hover:opacity-[0.5]' onClick={props.goback}> Go Back </button>
