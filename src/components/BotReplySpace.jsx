@@ -17,7 +17,7 @@ const BotReplySpace = (props)=>{
             }
             else{
                return(
-                <div className='font-mono font-bold text-white bg-black rounded-lg w-[400px] p-[20px] h-fit'>
+                <div className='font-mono font-bold text-white bg-black rounded-lg w-[400px] p-[20px] h-[200px] overflow-scroll'>
                     {props.reply}
                 </div>);
 

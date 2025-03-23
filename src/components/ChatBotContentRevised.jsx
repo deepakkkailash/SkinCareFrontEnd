@@ -58,7 +58,7 @@ const ChatbotContentRevised = ()=>{
                 }
 
             }
-            let res = await fetch('https://ac71-34-69-140-190.ngrok-free.app/getresponse',{
+            let res = await fetch('https://5da2-34-30-32-19.ngrok-free.app/getresponse',{
                 method:'POST',
                 credentials: "include",
                  headers: {

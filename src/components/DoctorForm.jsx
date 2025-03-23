@@ -15,7 +15,7 @@ const DoctorForm = (props)=>{
             formdata = Object.fromEntries(formdata.entries())
             formdata = {...formdata,loc:[Loc.coords.longitude,Loc.coords.latitude]}
             console.log(formdata)
-            let res = await fetch('https://2170-34-69-140-190.ngrok-free.app/registerDoctors',{
+            let res = await fetch('https://f002-34-69-140-190.ngrok-free.app/registerDoctors',{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
